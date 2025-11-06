@@ -3,22 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Audio ⇄ Lyrics Converter</title>
+  <title>🎵 Audio ⇄ Lyrics Converter</title>
+
+  <!-- Import font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Import jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- Link CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div class="overlay">
     <div class="container">
+      <img class="logo" src="https://cdn-icons-png.flaticon.com/512/727/727245.png" alt="Music Logo" />
       <h1>🎵 Audio ⇄ Lyrics Converter</h1>
-      <p>Convert your audio files into lyrics or readable text — fast and simple.</p>
 
-      <input type="file" id="audioInput" accept="audio/*" />
-      <button id="convertBtn">Convert</button>
+      <select id="modeSelect" onchange="changeMode()">
+        <option value="audioToLyrics">🎧 Audio to Lyrics</option>
+        <option value="lyricsToAudio">🎤 Lyrics to Audio</option>
+        <option value="hindiToEnglish">🌐 Hindi to English</option>
+      </select>
 
-      <div id="output"></div>
+      <select id="voiceSelect"></select>
+      <input type="text" id="filename" placeholder="Enter file name..." />
+      <textarea id="transcript" placeholder="🎶 Your lyrics will appear here..."></textarea>
+
+      <div class="buttons">
+        <button class="start-btn" id="startBtn" style="display:none;">Start Listening</button>
+        <button class="stop-btn" id="stopBtn" disabled style="display:none;">Stop</button>
+        <button class="speak-btn" id="speakBtn" style="display:none;" onclick="speakLyrics()">Speak</button>
+        <button class="save-btn" id="saveBtn" onclick="saveToLocal()">Save</button>
+      </div>
+
+      <div class="status" id="status">Not Listening</div>
+      <div class="footer">🎶 Made with ❤️ for music lovers</div>
     </div>
   </div>
 
+  <!-- Link JS -->
   <script src="script.js"></script>
 </body>
 </html>
