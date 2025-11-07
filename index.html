@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🎵 Audio ⇄ Lyrics Converter</title>
+  <title>🎵 Audio ⇄ Text Converter</title>
 
   <!-- Import font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
@@ -19,17 +19,17 @@
   <div class="overlay">
     <div class="container">
       <img class="logo" src="https://cdn-icons-png.flaticon.com/512/727/727245.png" alt="Music Logo" />
-      <h1>🎵 Audio ⇄ Lyrics Converter</h1>
+      <h1>🎵 Audio ⇄ Text Converter</h1>
 
       <select id="modeSelect" onchange="changeMode()">
-        <option value="audioToLyrics">🎧 Audio to Lyrics</option>
-        <option value="lyricsToAudio">🎤 Lyrics to Audio</option>
+        <option value="audioToText">🎧 Audio to Text</option>
+        <option value="textToAudio">🎤 Text to Audio</option>
         <option value="hindiToEnglish">🌐 Hindi to English</option>
       </select>
 
       <select id="voiceSelect"></select>
       <input type="text" id="filename" placeholder="Enter file name..." />
-      <textarea id="transcript" placeholder="🎶 Your lyrics will appear here..."></textarea>
+      <textarea id="transcript" placeholder="🎶 Your Text will appear here..."></textarea>
 
       <div class="buttons">
         <button class="start-btn" id="startBtn" style="display:none;">Start Listening</button>
@@ -47,3 +47,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
