@@ -22,14 +22,14 @@
       <h1>🎵 Audio ⇄ Text Converter</h1>
 
       <select id="modeSelect" onchange="changeMode()">
-        <option value="audioToText">🎧 Audio to Text</option>
-        <option value="textToAudio">🎤 Text to Audio</option>
+        <option value="audioToLyrics">🎧 Audio to Text</option>
+        <option value="lyricsToAudio">🎤 Text to Audio</option>
         <option value="hindiToEnglish">🌐 Hindi to English</option>
       </select>
 
       <select id="voiceSelect"></select>
       <input type="text" id="filename" placeholder="Enter file name..." />
-      <textarea id="transcript" placeholder="🎶 Your Text will appear here..."></textarea>
+      <textarea id="transcript" placeholder="🎶 Your text will appear here..."></textarea>
 
       <div class="buttons">
         <button class="start-btn" id="startBtn" style="display:none;">Start Listening</button>
@@ -47,4 +47,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
